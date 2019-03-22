@@ -236,3 +236,36 @@ main.about-top-content .text-container {
     padding: 0 2%;
     padding-bottom: 20px;
 }
+
+.container.about-page section.upsell{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    border-bottom: 1px dashed black;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+section.upsell .upsell-block {
+    width: 48%;
+    margin: 20px 0;
+}
+
+.upsell-block img {
+    margin-bottom: 10px;
+}
+
+.upsell-block p {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.upsell-block .btn-learn {
+    background: white;
+    border: 2px solid #5d5d5d;
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
