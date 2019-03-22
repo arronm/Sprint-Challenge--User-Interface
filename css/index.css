@@ -295,3 +295,40 @@ section.info {
 .post--preview p {
     margin-bottom: 40px;
 }
+
+/* Contact */
+.form {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+.form .id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form button {
+    width: 100%;
+    background: white;
+    border: 2px solid #5d5d5d;
+    height: 40px;
+    font-weight: 600;
+}
+
+.name, .email, .subject, .content{
+    display: flex;
+    flex-direction: column
+}
+
+.form .name {
+    width: 48%;
+}
+
+.form .email {
+    width: 40%;
+}
+
+.form .subject {
+    width: 48%;
+}
