@@ -259,7 +259,7 @@ section.upsell .upsell-block {
     margin-bottom: 20px;
 }
 
-.upsell-block .btn-learn {
+.btn-learn {
     background: white;
     border: 2px solid #5d5d5d;
     padding: 0 30px;
@@ -271,4 +271,26 @@ section.upsell .upsell-block {
 section.info {
     margin-bottom: 40px;
     padding: 0 2%;
+}
+
+/* Blog */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts .post {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.post--preview {
+    padding: 0 20px;
+}
+
+.post--preview p {
+    margin-bottom: 40px;
 }
