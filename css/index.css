@@ -223,20 +223,16 @@ h2 {
 }
 
 /* About Styles */
-/* padding-bottom: 20px;
-margin-bottom: 20px;
-border-bottom: 1px dashed black; */
-
-main {
+main.about-top-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
 
-main img {
+main.about-top-content img {
     margin-bottom: 20px;
 }
 
-main .text-container {
-    padding: 0 1%;
+main.about-top-content .text-container {
+    padding: 0 2%;
     padding-bottom: 20px;
 }
