@@ -172,7 +172,7 @@ header nav a:hover {
 }
 
 /* Content Styles */
-h2 {
+h2, p {
     font-weight: 600;
 }
 
@@ -241,14 +241,14 @@ main.about-top-content .text-container {
     display: flex;
     justify-content: space-between;
     padding: 0 2%;
-    border-bottom: 1px dashed black;
     margin-bottom: 20px;
-    padding-bottom: 20px;
 }
 
 section.upsell .upsell-block {
     width: 48%;
     margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed black;
 }
 
 .upsell-block img {
@@ -256,7 +256,6 @@ section.upsell .upsell-block {
 }
 
 .upsell-block p {
-    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -266,6 +265,10 @@ section.upsell .upsell-block {
     padding: 0 30px;
     height: 40px;
     border-radius: 10px;
-    font-weight: 600;
     cursor: pointer;
+}
+
+section.info {
+    margin-bottom: 40px;
+    padding: 0 2%;
 }
