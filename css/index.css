@@ -144,3 +144,19 @@ footer nav a {
     color: white;
     text-decoration: none;
 }
+
+/* Header Styles */
+header {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+header nav {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
