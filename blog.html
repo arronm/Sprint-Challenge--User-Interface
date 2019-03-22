@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -14,15 +15,15 @@
 
 <body>
   <div class="container about-page">
-  <header>
-    <img src="img/lambda-black.png" alt="Lambda logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#">Products</a>
-      <a href="#">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+      <img src="img/lambda-black.png" alt="Lambda logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Products</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main class="about-top-content">
@@ -30,7 +31,10 @@
       <div class="text-container">
         <h2>Blog</h2>
         <p>
-          Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsum non quidem aut quae. Quaerat,
+          corporis ullam aperiam maiores qui, dolorum omnis, vero at sed mollitia rerum fuga possimus explicabo.Voluptas
+          a officia quam incidunt placeat nemo nostrum, modi neque aperiam cum excepturi eveniet, consequuntur, nam fuga
+          inventore doloremque nisi vero sapiente praesentium est quo fugit? Dolor culpa nostrum mollitia.
         </p>
       </div>
     </main>
@@ -40,7 +44,9 @@
         <img src="img/post1.jpg" alt="strategy">
         <div class="post--preview">
           <h2>Cool Blog Post Title</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda, a commodi ipsum ratione sed! Exercitationem vel laboriosam repellendus reprehenderit. Consectetur nisi eligendi quidem ut laborum ratione alias harum cum.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda, a commodi ipsum ratione
+            sed! Exercitationem vel laboriosam repellendus reprehenderit. Consectetur nisi eligendi quidem ut laborum
+            ratione alias harum cum.</p>
           <input type="button" value="Learn More" class="btn-learn">
         </div>
       </div>
@@ -48,22 +54,86 @@
         <img src="img/post2.jpg" alt="strategy">
         <div class="post--preview">
           <h2>This Title Gets Clicks</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui labore aspernatur nisi repudiandae porro ullam, modi veritatis odit totam iusto itaque facere cupiditate exercitationem eaque quas provident adipisci rem cum.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui labore aspernatur nisi repudiandae porro
+            ullam, modi veritatis odit totam iusto itaque facere cupiditate exercitationem eaque quas provident adipisci
+            rem cum.</p>
           <input type="button" value="Learn More" class="btn-learn">
         </div>
       </div>
     </section>
-    <!-- <section class="comments">
-    </section> -->
-      <footer>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="#">Products</a>
-          <a href="#">Blog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </footer>
-    </div><!-- container -->        
+    <section class="comment-section">
+      <h2>Comments</h2>
+      <div class="form-container">
+        <label for="comment-name">Name</label>
+        <input type="text" id="comment-name">
+        <label for="comment-message">Message</label>
+        <input type="text" id="comment-message">
+        <input id="comment-submit" type="button" value="Submit">
+      </div>
+      <div id="comments"></div>
+    </section>
+    <footer>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Products</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div><!-- container -->
+  <script src="js/CommentsDatabase.js"></script>
+  <script>
+    const comments = new CommentsDatabase;
+
+    const updateCommentView = () => {
+      const commentContainer = document.getElementById('comments');
+      let commentElements = Object.values(comments.database).reverse().map((comment) => {
+        return `
+            <div class="comment" data-id=${comment.id}>
+              <div class="user">
+                  <img src="https://fakeimg.pl/150x150" />
+                  <span>${comment.user}</span>
+              </div>
+              <div class="message"><p>${comment.message}</p></div>
+              <input type="button" value="Delete" id="${comment.id}" class="comment-delete">
+            </div>
+          `;
+      });
+
+      commentContainer.innerHTML = "";
+
+      commentElements.forEach((comment) => {
+        let HTML = document.getElementById('comments').innerHTML;
+        document.getElementById('comments').innerHTML = HTML + comment;
+      });
+    }
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.matches('#comment-submit')) return;
+      if (document.getElementById('comment-message').value === '') return;
+
+      comments.save({
+        name: document.getElementById('comment-name').value,
+        message: document.getElementById('comment-message').value
+      });
+
+      document.getElementById('comment-name').value = '';
+      document.getElementById('comment-message').value = '';
+
+      updateCommentView();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.matches('.comment-delete')) return;
+      comments.remove(event.target.id);
+      // console.log(event.target.parentNode);
+      event.target.parentNode.classList.add('fadeOutLeft', 'animated');
+      setTimeout(updateCommentView, 500);
+    });
+
+    updateCommentView();
+  </script>
 </body>
+
 </html>
