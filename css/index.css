@@ -400,7 +400,7 @@ section.info {
 }
 
 .user {
-    width: 18%;
+    width: 15%;
     font-size: 20px;
     font-weight: 600;
 }
@@ -415,5 +415,5 @@ section.info {
 }
 
 .comment .message {
-    width: 78%;
+    width: 85%;
 }

@@ -82,6 +82,7 @@
       </nav>
     </footer>
   </div><!-- container -->
+
   <script src="js/CommentsDatabase.js"></script>
   <script>
     const comments = new CommentsDatabase;
@@ -92,7 +93,7 @@
         return `
             <div class="comment" data-id=${comment.id}>
               <div class="user">
-                  <img src="https://fakeimg.pl/150x150" />
+                  <img src="https://fakeimg.pl/100x100" />
                   <span>${comment.user}</span>
               </div>
               <div class="message"><p>${comment.message}</p></div>
@@ -127,7 +128,6 @@
     document.addEventListener('click', (event) => {
       if (!event.target.matches('.comment-delete')) return;
       comments.remove(event.target.id);
-      // console.log(event.target.parentNode);
       event.target.parentNode.classList.add('fadeOutLeft', 'animated');
       setTimeout(updateCommentView, 500);
     });
