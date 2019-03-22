@@ -160,6 +160,17 @@ header nav {
     justify-content: space-around;
 }
 
+header nav a {
+    text-decoration: none;
+    color: #5d5d5d;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    /* TODO: Possibly add animation to grow if time */
+    text-decoration: underline;
+}
+
 /* Content Styles */
 h2 {
     font-weight: 600;
