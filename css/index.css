@@ -29,7 +29,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -82,7 +83,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -143,4 +144,278 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+header nav {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #5d5d5d;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content Styles */
+h2, p {
+    font-weight: 400;
+}
+
+.top-content .text-container {
+    margin-top: 20px;
+}
+
+/* NOT THE BOXES!! */
+.middle-content .boxes [class$="-teal"] {
+    background: teal;
+}
+
+.middle-content .boxes [class$="-gold"] {
+    background: gold;
+}
+
+.middle-content .boxes [class$="-cadetblue"] {
+    background: cadetblue;
+}
+
+.middle-content .boxes [class$="-coral"] {
+    /* CORRRAL THAT KILLS PEOPLE */
+    background: coral;
+}
+
+.middle-content .boxes [class$="-crimson"] {
+    background: crimson;
+}
+
+.middle-content .boxes [class$="-forestgreen"] {
+    background: forestgreen;
+}
+
+.middle-content .boxes [class$="-darkorchid"] {
+    background: darkorchid;
+}
+
+.middle-content .boxes [class$="-hotpink"] {
+    background: hotpink;
+}
+
+.middle-content .boxes [class$="-indigo"] {
+    background: indigo;
+}
+
+.middle-content .boxes [class$="-dodgerblue"] {
+    background: dodgerblue;
+}
+
+/* About Styles */
+main.about-top-content {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+main.about-top-content img {
+    margin-bottom: 20px;
+}
+
+main.about-top-content .text-container {
+    padding: 0 2%;
+    padding-bottom: 20px;
+}
+
+.container.about-page section.upsell{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    margin-bottom: 20px;
+}
+
+section.upsell .upsell-block {
+    width: 48%;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.upsell-block img {
+    margin-bottom: 10px;
+}
+
+.upsell-block p {
+    margin-bottom: 20px;
+}
+
+.btn-learn {
+    background: white;
+    border: 2px solid #5d5d5d;
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+section.info {
+    margin-bottom: 40px;
+    padding: 0 2%;
+}
+
+/* Blog */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts .post {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.post--preview {
+    padding: 0 20px;
+}
+
+.post--preview p {
+    margin-bottom: 40px;
+}
+
+/* Contact */
+.form {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.form .id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form button {
+    width: 100%;
+    background: white;
+    border: 2px solid #5d5d5d;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.form label {
+    margin-bottom: 5px;
+}
+
+.form input {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.form textarea {
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.name, .email, .subject, .content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form .name {
+    width: 48%;
+}
+
+.form .email {
+    width: 40%;
+}
+
+.form .subject {
+    width: 100%;
+}
+
+/* Comments */
+.comment-section .form-container {
+    margin-bottom: 40px;
+    border-bottom: 1px dashed black;
+    padding-bottom: 20px;
+}
+.comment-section label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+.comment-section input {
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    border: 1px solid black;
+}
+
+.comment-section #comment-message {
+    height: 80px;
+    vertical-align: top;
+}
+
+.comment-section #comment-submit {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.comment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed black;
+}
+
+.comment input[type="button"] {
+    background: white;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.user {
+    width: 15%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.user .name {
+    font-size: 18px;
+}
+
+.comment .message {
+    width: 85%;
 }
