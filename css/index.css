@@ -179,3 +179,45 @@ h2 {
 .top-content .text-container {
     margin-top: 20px;
 }
+
+/* NOT THE BOXES!! */
+.middle-content .boxes [class$="-teal"] {
+    background: teal;
+}
+
+.middle-content .boxes [class$="-gold"] {
+    background: gold;
+}
+
+.middle-content .boxes [class$="-cadetblue"] {
+    background: cadetblue;
+}
+
+.middle-content .boxes [class$="-coral"] {
+    /* CORRRAL THAT KILLS PEOPLE */
+    background: coral;
+}
+
+.middle-content .boxes [class$="-crimson"] {
+    background: crimson;
+}
+
+.middle-content .boxes [class$="-forestgreen"] {
+    background: forestgreen;
+}
+
+.middle-content .boxes [class$="-darkorchid"] {
+    background: darkorchid;
+}
+
+.middle-content .boxes [class$="-hotpink"] {
+    background: hotpink;
+}
+
+.middle-content .boxes [class$="-indigo"] {
+    background: indigo;
+}
+
+.middle-content .boxes [class$="-dodgerblue"] {
+    background: dodgerblue;
+}
